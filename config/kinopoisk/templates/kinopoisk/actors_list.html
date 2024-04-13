@@ -1,0 +1,20 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+    Actors
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% for actor in movies %}
+            <div class="card" style="width: 18rem; display: inline-block; margin: 20px 10px;">
+                <img src="{{person.photos.url}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{person.title}}</h5>
+                    <p class="card-text">{{person.desc}}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
